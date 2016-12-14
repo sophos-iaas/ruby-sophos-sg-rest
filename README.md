@@ -1,6 +1,6 @@
-# Sophos::SG::Rest
+# Sophos::SG::REST
 
-This gem implements a simple rest client for the SOPHOS SG REST API. The client
+This gem implements a simple client for the REST API of SOPHOS SG UTM. The client
 will help building [Chef](https://www.chef.io/), [Puppet](https://puppet.com/)
 or other integration and provisioning scripts.
 
