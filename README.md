@@ -8,7 +8,9 @@ or other integration and provisioning scripts.
 
 Add this line to your application's Gemfile:
 
-    gem 'sophos-sg-rest'
+```ruby
+gem 'sophos-sg-rest'
+```
 
 And then execute:
 
@@ -22,9 +24,12 @@ Or install it yourself as:
 
 Simple example on how to get started:
 
-    client = described_class.new('https://<user>:<pass>@<host>/api/',
-                                 fingerprint: 'F3:D3:C6:C2:01:93:4A:BC:87:C4:07:8D:10:5A:59:F3:B0:B0:3C:XX')
-    hosts = client.objects('network/host')
+```ruby
+require 'sophos/sg/rest'
+client = described_class.new('https://<user>:<pass>@<host>/api/',
+                             fingerprint: 'F3:D3:C6:C2:01:93:4A:BC:87:C4:07:8D:10:5A:59:F3:B0:B0:3C:XX')
+hosts = client.objects('network/host')
+```
 
 More documentation can be found at [rubydoc](http://www.rubydoc.info/gems/sophos-sg-rest)
 
