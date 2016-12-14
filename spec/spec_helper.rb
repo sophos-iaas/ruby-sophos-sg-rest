@@ -19,6 +19,14 @@
 
 require 'logger'
 require 'simplecov'
+if ENV['JENKINS_HOME']
+  require 'simplecov-cobertura'
+
+  SimpleCov.formatters = [
+    SimpleCov::Formatter::HTMLFormatter,
+    SimpleCov::Formatter::CoberturaFormatter
+  ]
+end
 SimpleCov.start
 
 $:.unshift(File.expand_path("../lib", __FILE__))
