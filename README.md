@@ -1,16 +1,14 @@
 # Sophos::SG::Rest
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sophos/sg/rest`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem implements a simple rest client for the SOPHOS SG REST API. The client
+will help building [Chef](https://www.chef.io/), [Puppet](https://puppet.com/)
+or other integration and provisioning scripts.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'sophos-sg-rest'
-```
+    gem 'sophos-sg-rest'
 
 And then execute:
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simple example on how to get started:
+
+    client = described_class.new('https://<user>:<pass>@<host>/api/',
+                                 fingerprint: 'F3:D3:C6:C2:01:93:4A:BC:87:C4:07:8D:10:5A:59:F3:B0:B0:3C:XX')
+    hosts = client.objects('network/host')
+
+More documentation can be found at [rubydoc](http://www.rubydoc.info/gems/sophos-sg-rest)
 
 ## Development
 
@@ -32,5 +36,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sophos-sg-rest.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sophos-iaas/ruby-sophos-sg-rest.
 
